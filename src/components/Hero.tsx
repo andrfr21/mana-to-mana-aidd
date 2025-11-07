@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-solidarity.jpg";
 
 export const Hero = () => {
@@ -34,22 +35,25 @@ export const Hero = () => {
             Un geste simple, un impact réel dans notre communauté.
           </p>
 
+          {/* Boutons corrigés */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button 
-              size="lg" 
-              className="bg-card hover:bg-card/90 text-primary font-semibold shadow-card text-lg px-8 py-6 transition-smooth"
-              onClick={() => window.location.href = '/donateur'}
-            >
-              Je veux aider
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6 transition-smooth"
-              onClick={() => window.location.href = '/beneficiaire'}
-            >
-              J'ai besoin d'aide
-            </Button>
+            <Link to="/signup">
+              <Button 
+                size="lg" 
+                className="bg-card hover:bg-card/90 text-primary font-semibold shadow-card text-lg px-8 py-6 transition-smooth"
+              >
+                Je veux aider
+              </Button>
+            </Link>
+            <Link to="/signup">
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6 transition-smooth"
+              >
+                J'ai besoin d'aide
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
