@@ -38,7 +38,6 @@ export const Hero = () => {
             <Button 
               size="lg" 
               className="bg-card hover:bg-card/90 text-primary font-semibold shadow-card text-lg px-8 py-6 transition-smooth"
-              onClick={() => window.location.href = '/donateur'}
             >
               Je veux aider
             </Button>
@@ -46,7 +45,6 @@ export const Hero = () => {
               size="lg" 
               variant="outline"
               className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6 transition-smooth"
-              onClick={() => window.location.href = '/beneficiaire'}
             >
               J'ai besoin d'aide
             </Button>
